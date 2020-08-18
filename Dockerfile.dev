@@ -1,0 +1,11 @@
+FROM node:alpine
+
+WORKDIR '/app'
+
+COPY package.json .
+RUN npm install
+
+# not necessary if using docker compose to run container as we're using volumes, but this will allow for creation of test container.
+COPY . .
+
+CMD ["npm", "run", "start"]
