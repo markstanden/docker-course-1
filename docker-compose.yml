@@ -1,6 +1,8 @@
 version: '3'
 services:
   web:
+    # required due to create-react-app bug, without this the app will fail with exit code(0)
+    stdin_open: true
     build:
       context: .
       dockerfile: Dockerfile.dev
@@ -9,4 +11,14 @@ services:
     volumes:
       - /app/node_modules
       - .:/app
+    
+  tests:
+    # required due to create-react-app bug, without this the app will fail with exit code(0)
     stdin_open: true
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    volumes:
+      - /app/node_modules
+      - .:/app
+    command: ["npm", "run", "test"]

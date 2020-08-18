@@ -8,7 +8,8 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Go Nuclear
+          e = mc<sup>2</sup>
+          
         </p>
         <a
           className="App-link"
@@ -16,7 +17,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          e = mc<sup>2</sup>
+          Go Nuclear
         </a>
       </header>
     </div>
