@@ -8,8 +8,8 @@ test('renders learn react link', () => {
   expect(linkElement).toBeInTheDocument();
 });
 
-/* test('Renders relativity equation', () => {
+test('Renders relativity equation', () => {
   const { getByText } = render(<App />);
   const linkElement = getByText(/e = mc/i);
   expect(linkElement).toBeInTheDocument();
-}); */
+});
