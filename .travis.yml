@@ -11,3 +11,14 @@ before_install:
 script:
   - docker run -e CI=true markstanden/docker-learning npm run test
 
+deploy:
+  provider: elasticbeanstalk
+  region: "us-east-2"
+  app: "docker-learning"
+  env: "DockerLearning-env"
+  bucket_name: "elasticbeanstalk-us-east-2-420143341232"
+  bucket_path: "docker-learning"
+  on:
+    branch: master
+  access_key_id: $AWS_ACCESS_KEY
+  secret_access_key: $AWS_SECRET_KEY
