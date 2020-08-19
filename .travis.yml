@@ -1,4 +1,7 @@
-sudo: required
+os: linux
+dist: focal
+language: generic
+
 services:
   - docker
 
@@ -8,4 +11,3 @@ before_install:
 script:
   - docker run -e CI=true markstanden/docker-learning npm run test
 
-language: generic 
