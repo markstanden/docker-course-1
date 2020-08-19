@@ -9,7 +9,8 @@ function App() {
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           e = mc<sup>2</sup>
-          
+          New feature:
+          Run faster than light, c you later...
         </p>
         <a
           className="App-link"
